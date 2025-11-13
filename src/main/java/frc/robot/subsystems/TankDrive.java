@@ -9,6 +9,19 @@ import com.revrobotics.spark.SparkBase.ResetMode;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.Constants;
+
+
 public class TankDrive {
-    
+    private SparkMax leftLeader;
+  private SparkMax leftFollower;
+  private SparkMaxConfig motorConfig;
+  private SparkMax rightLeader;
+  private SparkMax rightFollower;
+    public TankDrive(){
+        leftLeader = new SparkMax(Constants.DriveConstants.LEFT_LEADER_ID, MotorType.kBrushless);
+        leftFollower = new SparkMax(Constants.DriveConstants.LEFT_FOLLOWER_ID, MotorType.kBrushless);
+        rightLeader = new SparkMax(Constants.DriveConstants.RIGHT_LEADER_ID, MotorType.kBrushless);
+        rightFollower = new SparkMax(Constants.DriveConstants.RIGHT_FOLLOWER_ID, MotorType.kBrushless);
+    }
 }

@@ -15,5 +15,19 @@ package frc.robot;
 public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
-  }// does this add anything
+
+  // does this add anything
+  }
+  public static final class IntakePivotConstants {
+    public static final int INTAKE_PIVOT_ID = 0;
+    public static final int INTAKE_PIVOT_FOLLOWER_ID = 0;
+  }
+  public static final class DriveConstants{
+    public static final int LEFT_LEADER_ID = 0;
+    public static final int LEFT_FOLLOWER_ID = 0;
+    public static final int RIGHT_LEADER_ID = 0;
+    public static final int RIGHT_FOLLOWER_ID = 0;
+  }
+
+  
 }

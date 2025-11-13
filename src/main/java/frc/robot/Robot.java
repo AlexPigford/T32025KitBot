@@ -7,8 +7,21 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkLowLevel.MotorType;
+import com.revrobotics.spark.SparkLowLevel.MotorType;
+import com.revrobotics.spark.config.SparkMaxConfig;
+import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
+import com.revrobotics.spark.SparkMax;
+import com.revrobotics.spark.SparkBase.PersistMode;
+import com.revrobotics.spark.SparkBase.ResetMode;
+/**
+ *private SparkMax leftLeader;
+  private SparkMax leftFollower;
+  private SparkMaxConfig motorConfig;
+  private SparkMax rightLeader;
+  private SparkMax rightFollower;
+  private SparkMax intakePivot; 
+  private SparkMax intakePivotFollower;
+ */
 /**
  * The methods in this class are called automatically corresponding to each mode, as described in
  * the TimedRobot documentation. If you change the name of this class or the package after creating
@@ -16,7 +29,8 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
  */
 public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
-
+  
+  
   private final RobotContainer m_robotContainer;
 
   /**
