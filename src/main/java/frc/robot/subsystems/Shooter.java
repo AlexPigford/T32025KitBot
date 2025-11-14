@@ -13,10 +13,30 @@ import frc.robot.Constants;
 public class Shooter extends SubsystemBase{
     private SparkMaxConfig motorConfig;
   
-  private SparkMax intakePivot; 
-  private SparkMax intakePivotFollower;
+  private  SparkMax intakePivot; 
+  private  SparkMax intakePivotFollower;
     public Shooter(){
         intakePivot = new SparkMax(Constants.IntakePivotConstants.INTAKE_PIVOT_ID, MotorType.kBrushless);
         intakePivotFollower = new SparkMax(Constants.IntakePivotConstants.INTAKE_PIVOT_FOLLOWER_ID, MotorType.kBrushless);
+        
+
     }
+    public void setShooterSpeed(double speed){
+        intakePivot.set(speed);
+        //can be replaced with follower and leader
+        intakePivotFollower.set(-speed);
+
+    }
+    public void stopShooter(){
+      intakePivot.stopMotor();
+      intakePivotFollower.stopMotor();
+    }
+    public Command shootOut(double speed){
+      return runOnce(
+        () -> {
+
+        });
+      }
+      
+    
 }
