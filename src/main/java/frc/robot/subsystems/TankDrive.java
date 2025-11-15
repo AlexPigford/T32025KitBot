@@ -37,4 +37,10 @@ public class TankDrive {
       rightLeader.set(speed);
       rightFollower.set(speed);
     }
+    public void stop(){
+      leftLeader.set(0);
+      leftFollower.set(0);
+      rightLeader.set(0);
+      rightFollower.set(0);
+    }
 }

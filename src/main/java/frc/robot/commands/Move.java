@@ -14,15 +14,37 @@ import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.TankDrive;
 
 public class Move extends Command{
-    private TankDrive drive;
-    prive double speed;
-    public Move(TankDrive drive, double speed){
-        this.drive = drive;
-        addRequirments(TankDrive);
+    private TankDrive tankDrive;
+    private double speed;
+    public Move(TankDrive tankDrive, double speed){
+        this.tankDrive = tankDrive;
         this.speed = speed;
-    }
-    @Override
-    public void execute() {
-      drive.move(speed);
-    }
+        
+                
+            }
+            
+            @Override
+            public void initialize() {
+             
+            }
+          
+            // Called every time the scheduler runs while the command is scheduled.
+            @Override
+            public void execute() {
+              tankDrive.move(speed); 
+            }
+          
+            // Called once the command ends or is interrupted.
+            @Override
+            public void end(boolean interrupted) {
+              tankDrive.stop();
+            }
+          
+            // Returns true when the command should end.
+            @Override
+            public boolean isFinished() {
+              return false;
+            }
+          
+          
 }
