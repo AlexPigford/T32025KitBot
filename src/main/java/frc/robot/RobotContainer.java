@@ -28,7 +28,7 @@ public class RobotContainer {
     //subsytems
   shooter = new Shooter();
     shoot = new Shoot(shooter);
-    System.out.println("HI");
+    
     // Configure the trigger bindings
     configureBindings();
   }
