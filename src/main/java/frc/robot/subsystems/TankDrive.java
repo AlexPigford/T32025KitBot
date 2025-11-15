@@ -25,4 +25,16 @@ public class TankDrive {
         rightFollower = new SparkMax(Constants.DriveConstants.RIGHT_FOLLOWER_ID, MotorType.kBrushless);
         
     }
+    public void move(double speed){
+      leftLeader.set(speed);
+      leftFollower.set(speed);
+      rightLeader.set(-speed);
+      rightFollower.set(-speed);
+    }
+    public void turn(double speed){
+      leftLeader.set(speed);
+      leftFollower.set(speed);
+      rightLeader.set(speed);
+      rightFollower.set(speed);
+    }
 }
