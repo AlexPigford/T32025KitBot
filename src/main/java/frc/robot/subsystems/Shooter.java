@@ -31,12 +31,7 @@ public class Shooter extends SubsystemBase{
       intakePivot.stopMotor();
       intakePivotFollower.stopMotor();
     }
-    public Command shootOut(double speed){
-      return runOnce(
-        () -> {
-
-        });
-      }
+    
       
     
 }
