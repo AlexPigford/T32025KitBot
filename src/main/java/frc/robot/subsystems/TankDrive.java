@@ -34,8 +34,8 @@ public class TankDrive {
     public void turn(double speed){
       leftLeader.set(speed);
       leftFollower.set(speed);
-      rightLeader.set(speed);
-      rightFollower.set(speed);
+      rightLeader.set(-speed);
+      rightFollower.set(-speed);
     }
     public void stop(){
       leftLeader.set(0);
