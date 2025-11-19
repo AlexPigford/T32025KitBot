@@ -44,6 +44,7 @@ public class RobotContainer {
    */
   private void configureBindings() {
     Controller.rightTrigger(.1).whileTrue(shoot);
+    Controller.left
   }
 
   /**
