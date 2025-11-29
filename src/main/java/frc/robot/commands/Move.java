@@ -12,14 +12,15 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.TankDrive;
-
+/* 
 public class Move extends Command{
     private TankDrive tankDrive;
     private double speed;
-    public Move(TankDrive tankDrive, double speed){
+    private double turn;
+    public Move(TankDrive tankDrive, double speed, double turn){
         this.tankDrive = tankDrive;
         this.speed = speed;
-        
+        this.turn = turn;
                 
             }
             
@@ -31,7 +32,7 @@ public class Move extends Command{
             // Called every time the scheduler runs while the command is scheduled.
             @Override
             public void execute() {
-              tankDrive.move(speed); 
+              tankDrive.move(speed, turn); 
             }
           
             // Called once the command ends or is interrupted.
@@ -48,3 +49,4 @@ public class Move extends Command{
           
           
 }
+            */

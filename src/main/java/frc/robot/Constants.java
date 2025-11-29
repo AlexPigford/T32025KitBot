@@ -18,7 +18,7 @@ public final class Constants {
 
   // does this add anything
   }
-  public static final class IntakePivotConstants {
+  public static final class ShootConstants {
     public static final int SHOOT_MOTOR_ID = 0;
    
   }
